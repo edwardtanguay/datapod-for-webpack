@@ -11,6 +11,11 @@ $theme-colors: (
   "dark": #343a40
 );
 
+body {
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 h1 {
 	color: map-get($theme-colors, "primary");
 }
