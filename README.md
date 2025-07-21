@@ -8,13 +8,13 @@ live: https://datapod-for-webpack.vercel.app
 # setup
 
 - `npm i`
-- right-click on dist/index.html, Open with Live Server
 
 # develop
 
-- edit **src/index.js**
 - `npm run watch`
+- right-click on `dist/index.html`, Open with Live Server
+- edit files in `/src` with hot-reloading
 
 # publish
 
-- push to Vercel (`vercel.json` is configured for one-step publish)
+- one-step publish to Vercel (`vercel.json` is configured)
