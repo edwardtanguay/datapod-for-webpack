@@ -3,8 +3,15 @@ const common = require('./webpack.common');
 
 module.exports = merge(common, {
 	mode: 'development',
-	watch: true,
-	watchOptions: {
-		ignored: /node_modules/,
+	devServer: {
+		open: true,
+		port: 2122,
+		static: './dist',
+		client: {
+			overlay: {
+				errors: true,
+				warnings: false,
+			},
+		},
 	},
 });
