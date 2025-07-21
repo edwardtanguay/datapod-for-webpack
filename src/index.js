@@ -1,4 +1,4 @@
 import $ from 'jquery';
 
 $('#title').html('Hello, Webpack!');
-$('.message').html('This is a simple Webpack setup, created with npx, ver 8, test: subdir, config, dev');
+$('.message').html('This is a simple Webpack setup, created with npx, ver 10, test: subdir, config, dev');
