@@ -7,26 +7,11 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/main-[contenthash].js',
+		clean: true,
 	},
 	mode: 'development',
 	module: {
 		rules: [
-			{
-				test: /\.css|scss$/,
-				use: [
-					'style-loader',
-					'css-loader',
-					{
-						loader: 'postcss-loader',
-						options: {
-							postcssOptions: {
-								plugins: [require('autoprefixer')],
-							},
-						},
-					},
-					'sass-loader',
-				],
-			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -43,20 +28,21 @@ module.exports = {
 				test: /\.jpg|jpeg|png|gif|svg$/,
 				generator: {
 					filename: 'images/[name]-[hash][ext]',
-				}
+				},
 			},
 			{
 				test: /\.woff|woff2$/,
 				generator: {
 					filename: 'font/[name]-[hash][ext]',
-				}
-			}
+				},
+			},
 		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/templates/index.html'),
 			filename: 'index.html',
+			minify: false,
 		}),
 		new CopyWebpackPlugin({
 			patterns: [

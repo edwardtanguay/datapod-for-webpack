@@ -14,4 +14,24 @@ module.exports = merge(common, {
 			},
 		},
 	},
+	module: {
+		rules: [
+			{
+				test: /\.css|scss$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [require('autoprefixer')],
+							},
+						},
+					},
+					'sass-loader',
+				],
+			},
+		],
+	},
 });
