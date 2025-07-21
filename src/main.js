@@ -4,6 +4,6 @@ import './styles/main.scss';
 
 $('#title').html('Hello, Webpack!');
 $('.message').html(
-	'This is a simple Webpack setup, created with npx, ver 18, test: subdir, config, dev',
+	'This is a simple Webpack setup, created with npx, ver 26, test: subdir, config, dev',
 );
 $('.midsection').html('<img src="images/person-icon.png"/>');
