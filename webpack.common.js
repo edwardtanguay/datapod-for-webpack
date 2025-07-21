@@ -1,11 +1,12 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/main.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'js/main.js',
+		filename: 'js/main-[contenthash].js',
 	},
 	mode: 'development',
 	module: {
@@ -53,15 +54,15 @@ module.exports = {
 		],
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'src/templates/index.html'),
+			filename: 'index.html',
+		}),
 		new CopyWebpackPlugin({
 			patterns: [
 				{
 					from: path.resolve(__dirname, 'src/images'),
 					to: path.resolve(__dirname, 'dist/images'),
-				},
-				{
-					from: path.resolve(__dirname, 'src/index.html'),
-					to: path.resolve(__dirname, 'dist/index.html'),
 				},
 			],
 		}),
