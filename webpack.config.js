@@ -41,6 +41,18 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.jpg|jpeg|png|gif|svg$/,
+				generator: {
+					filename: 'images/[name]-[hash][ext]',
+				}
+			},
+			{
+				test: /\.woff|woff2$/,
+				generator: {
+					filename: 'font/[name]-[hash][ext]',
+				}
+			}
 		],
 	},
 	plugins: [
