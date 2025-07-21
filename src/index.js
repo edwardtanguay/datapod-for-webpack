@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import bootstrap from 'bootstrap';
 import './styles/main.scss';
 
 $('#title').html('Hello, Webpack!');
