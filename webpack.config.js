@@ -5,5 +5,6 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/main.js'
 	},
-	mode: 'development'
+	mode: 'development',
+	watch: true
 };
