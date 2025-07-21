@@ -8,9 +8,6 @@ module.exports = {
 		filename: 'js/main.js',
 	},
 	mode: 'development',
-	watchOptions: {
-		ignored: /node_modules/,
-	},
 	module: {
 		rules: [
 			{
