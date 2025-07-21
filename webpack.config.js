@@ -6,5 +6,7 @@ module.exports = {
 		filename: 'js/main.js'
 	},
 	mode: 'development',
-	watch: true
+	watchOptions: {
+		ignored: /node_modules/
+	},
 };
