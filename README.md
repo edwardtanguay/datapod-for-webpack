@@ -10,4 +10,4 @@ This is a basic HTML/CSS/JS site set up with Webpack 5.
 # make modifications
 
 - edit **src/index.js**
-- `npx webpack`
+- `npm run dev`
