@@ -42,7 +42,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/templates/index.html'),
 			filename: 'index.html',
-			minify: false,
+			minify: true,
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
