@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		'index': './src/main.js',
+		'index': './src/index.js',
 		'video': './src/video.js',
 	},
 	output: {
