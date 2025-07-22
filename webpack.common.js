@@ -53,11 +53,13 @@ module.exports = {
 			template: path.resolve(__dirname, 'src/templates/index.html'),
 			filename: 'index.html',
 			minify: true,
+			chunks: ['index'],
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src/templates/video.html'),
 			filename: 'video.html',
 			minify: true,
+			chunks: ['video'],
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
